@@ -15,10 +15,14 @@ const Post = ({ post, url }) => {
         />
       </ImageWrapper>
       <ContentWrapper>
-        <button>Like</button>
-        <span>{post.date}</span>
+        <div style={{ display: "flex", width: "100%" }}>
+          <span style={{ flex: "1" }}>{post.date}</span>
+          <div style={{ flex: "1", display: "flex", justifyContent: "right" }}>
+            <button>🚀</button>
+          </div>
+        </div>
         <h1>{post.title}</h1>
-        <h2></h2>
+        {!post.copyright == "" ? <h2>{post.copyright}</h2> : null}
         <p>{post.explanation}</p>
       </ContentWrapper>
     </Wrapper>
