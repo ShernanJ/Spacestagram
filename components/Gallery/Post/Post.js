@@ -4,7 +4,7 @@ import { Wrapper, ImageWrapper, ContentWrapper } from "./PostStyles";
 
 const Post = ({ post, url }) => {
   useEffect(() => {
-    let liked = localStorage.getItem(post.url);
+    let liked = localStorage.getItem(JSON.stringify(post));
     if (liked == "true") {
       setLikeIndicate("green");
     }
@@ -12,11 +12,12 @@ const Post = ({ post, url }) => {
 
   const [likeIndicate, setLikeIndicate] = useState("");
   const like = (value) => {
-    if (localStorage.getItem(value) == "true") {
-      localStorage.setItem(value, false);
+    let post = JSON.stringify(value);
+    if (localStorage.getItem(post) == "true") {
+      localStorage.setItem(post, false);
       setLikeIndicate("");
     } else {
-      localStorage.setItem(value, true);
+      localStorage.setItem(post, true);
       setLikeIndicate("green");
     }
   };
@@ -37,7 +38,7 @@ const Post = ({ post, url }) => {
           <span style={{ flex: "1" }}>{post.date}</span>
           <div style={{ flex: "1", display: "flex", justifyContent: "right" }}>
             <button
-              onClick={() => like(post.url)}
+              onClick={() => like(post)}
               style={{ backgroundColor: likeIndicate }}
             >
               🚀
