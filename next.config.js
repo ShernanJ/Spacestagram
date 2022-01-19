@@ -7,6 +7,7 @@ module.exports = {
       "www.youtube.com",
       "mars.nasa.gov",
       "player.vimeo.com",
+      "img.youtube.com",
     ],
   },
 };
