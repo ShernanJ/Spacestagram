@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { quotes } from "../InspirationQuotes";
 
 export const Wrapper = styled.article`
+  margin-top: 60px;
   height: 43vh;
   width: 100%;
 `;
@@ -52,7 +53,7 @@ export const Quote = styled.span`
 `;
 
 const APOD = ({ data: apod }) => {
-  var quote = quotes[Math.floor(Math.random() * 50)];
+  const [quote, setQuote] = useState(quotes[Math.floor(Math.random() * 50)]);
 
   return (
     <Wrapper>
@@ -68,6 +69,12 @@ const APOD = ({ data: apod }) => {
         <ImageOverlay>
           <Quote>
             {quote.q} <br />- <span>{quote.a}</span>
+            <br />
+            <button
+              onClick={() => setQuote(quotes[Math.floor(Math.random() * 50)])}
+            >
+              New Quote
+            </button>
           </Quote>
         </ImageOverlay>
         <Image
