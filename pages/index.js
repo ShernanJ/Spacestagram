@@ -52,9 +52,7 @@ const Home = ({ data: apod, today }) => {
       </Head>
       <nav>
         <ul>
-          <li>
-            <a href="/">Spacestagram</a>
-          </li>
+          <li>Spacestagram</li>
         </ul>
       </nav>
       <main>
