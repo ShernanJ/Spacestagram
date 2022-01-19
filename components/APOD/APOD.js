@@ -4,16 +4,18 @@ import styled from "styled-components";
 import { quotes } from "../InspirationQuotes";
 
 export const Wrapper = styled.article`
+  font-family: "Open Sans";
   margin-top: 60px;
-  height: 43vh;
+  min-height: 43vh;
+  height: auto;
   width: 100%;
 `;
 
 export const ImageContainer = styled.section`
   position: relative;
-  height: 43vh;
   width: 100%;
-  max-height: 43vh;
+  min-height: 43vh;
+  height: auto;
   max-width: 100%;
   z-index: 0;
 `;
@@ -27,7 +29,8 @@ export const ImageOverlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 43vh;
+  min-height: 43vh;
+  height: auto;
   width: 100%;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.4);
@@ -42,12 +45,14 @@ export const ImageOverlay = styled.div`
 `;
 
 export const Quote = styled.span`
+  font-weight: 500;
   font-size: 2rem;
   padding: 4rem;
   color: white;
   text-align: center;
 
   & span {
+    font-weight: 300;
     font-size: 1.5rem;
   }
 `;

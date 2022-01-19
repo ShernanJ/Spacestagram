@@ -31,27 +31,12 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* <link
-            rel="preload"
-            href="/fonts/FilsonProMedium.otf"
-            as="font"
-            type="font/otf"
-            crossOrigin=""
-          />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
           <link
-            rel="preload"
-            href="/fonts/ProximaNovaAlt-Bold.otf"
-            as="font"
-            type="font/otf"
-            crossOrigin=""
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
           />
-          <link
-            rel="preload"
-            href="/fonts/ProximaNova-Regular.otf"
-            as="font"
-            type="font/otf"
-            crossOrigin=""
-          /> */}
         </Head>
         <body>
           <Main />
