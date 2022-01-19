@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import APOD from "../components/APOD/APOD";
 import axios from "axios";

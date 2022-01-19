@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Wrapper, ImageWrapper, ContentWrapper } from "./PostStyles";
 
 const Post = ({ post, url }) => {
+  useEffect(() => {
+    let liked = localStorage.getItem(post.url);
+    if (liked == "true") {
+      setLikeIndicate("green");
+    }
+  }, []);
+
+  const [likeIndicate, setLikeIndicate] = useState("");
+  const like = (value) => {
+    if (localStorage.getItem(value) == "true") {
+      localStorage.setItem(value, false);
+      setLikeIndicate("");
+    } else {
+      localStorage.setItem(value, true);
+      setLikeIndicate("green");
+    }
+  };
+
   return (
     <Wrapper>
       <ImageWrapper>
@@ -18,7 +36,12 @@ const Post = ({ post, url }) => {
         <div style={{ display: "flex", width: "100%" }}>
           <span style={{ flex: "1" }}>{post.date}</span>
           <div style={{ flex: "1", display: "flex", justifyContent: "right" }}>
-            <button>🚀</button>
+            <button
+              onClick={() => like(post.url)}
+              style={{ backgroundColor: likeIndicate }}
+            >
+              🚀
+            </button>
           </div>
         </div>
         <h1>{post.title}</h1>
