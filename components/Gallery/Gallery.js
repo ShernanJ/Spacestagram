@@ -35,7 +35,7 @@ const Gallery = ({ data }) => {
         dataLength={posts.length}
         next={getMorePost}
         hasMore={hasMore}
-        loader={<h3>Loading...</h3>}
+        loader={<h3 style={{ textAlign: "center" }}>Loading...</h3>}
         endMessage={<h4>You scrolled through all of them!</h4>}
       >
         {posts.map((post, i) => {
