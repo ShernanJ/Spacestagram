@@ -9,8 +9,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: #FBF7ED;
     overflow-x: hidden;
   }
-
-  //Add fonts here later
 `;
 
 function MyApp({ Component, pageProps }) {
