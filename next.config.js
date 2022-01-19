@@ -6,6 +6,9 @@ module.exports = {
       "apod.nasa.gov",
       "www.youtube.com",
       "mars.nasa.gov",
+      "player.vimeo.com",
+      "img.youtube.com",
+      "i.vimeocdn.com",
     ],
   },
 };
