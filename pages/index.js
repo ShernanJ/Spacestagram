@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 import Head from "next/head";
 import APOD from "../components/APOD/APOD";
 import axios from "axios";
 import Gallery from "../components/Gallery/Gallery";
-import { getPosts } from "../lib/getPosts";
+import { getRecent } from "../lib/getPosts";
+
+export const Content = styled.div``;
 
 const Home = ({ gallery, today }) => {
   return (
@@ -42,7 +45,9 @@ const Home = ({ gallery, today }) => {
       </nav>
       <main>
         <APOD data={today} />
-        <Gallery data={gallery} />
+        <Content>
+          <Gallery data={gallery} />
+        </Content>
       </main>
     </>
   );
@@ -52,11 +57,7 @@ export const getServerSideProps = async () => {
   const today = await axios.get(
     `https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}`
   );
-  const res = await getPosts();
-  //Used to test date ranges
-  // const res = await axios.get(
-  //   `https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}&start_date=2021-08-01&end_date=2021-08-18&thumbs=true`
-  // );
+  const res = await getRecent();
 
   return {
     props: { gallery: res.data, today: today.data },
