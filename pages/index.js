@@ -3,6 +3,7 @@ import Head from "next/head";
 import APOD from "../components/APOD/APOD";
 import axios from "axios";
 import Gallery from "../components/Gallery/Gallery";
+import { getPosts } from "../lib/getPosts";
 
 const Home = ({ gallery, today }) => {
   return (
@@ -48,17 +49,11 @@ const Home = ({ gallery, today }) => {
   );
 };
 
-export const getServerSideProps = async (context) => {
-  const { count } = context.query;
-
+export const getServerSideProps = async () => {
   const today = await axios.get(
     `https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}`
   );
-  const res = await axios.get(
-    `https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}&count=${
-      !isNaN(count) ? (count <= 30 && count > 0 ? count : 10) : 10
-    }&thumbs=true`
-  );
+  const res = await getPosts();
   //Used to test date ranges
   // const res = await axios.get(
   //   `https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}&start_date=2021-08-01&end_date=2021-08-18&thumbs=true`
