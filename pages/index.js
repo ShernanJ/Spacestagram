@@ -50,7 +50,7 @@ export const getServerSideProps = async (context) => {
   );
   const res = await axios.get(
     `https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}&count=${
-      !isNaN(count) ? (count <= 50 && count > 0 ? count : 10) : 10
+      !isNaN(count) ? (count <= 30 && count > 0 ? count : 10) : 10
     }&thumbs=true`
   );
   //Used to test date ranges
