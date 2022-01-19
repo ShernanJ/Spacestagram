@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.article`
-  font-family: "sans-serif";
   display: flex;
   flex-direction: column;
   max-width: 30rem;
