@@ -50,10 +50,27 @@ export const Quote = styled.span`
   padding: 4rem;
   color: white;
   text-align: center;
-
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
   & span {
     font-weight: 300;
     font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: 760px) {
+    font-size: 1.5rem;
+    & span {
+      font-size: 1rem;
+    }
+  }
+  @media only screen and (max-width: 460px) {
+    font-size: 1rem;
+    & span {
+      font-size: 0.8rem;
+    }
+  }
   }
 `;
 
@@ -71,15 +88,11 @@ const APOD = ({ data: apod }) => {
           maxWidth: "100%",
         }}
       >
-        <ImageOverlay>
+        <ImageOverlay
+          onClick={() => setQuote(quotes[Math.floor(Math.random() * 50)])}
+        >
           <Quote>
             {quote.q} <br />- <span>{quote.a}</span>
-            <br />
-            <button
-              onClick={() => setQuote(quotes[Math.floor(Math.random() * 50)])}
-            >
-              New Quote
-            </button>
           </Quote>
         </ImageOverlay>
         <Image

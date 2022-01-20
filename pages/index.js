@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import Head from "next/head";
-import APOD from "../components/APOD/APOD";
 import axios from "axios";
-import Gallery from "../components/Gallery/Gallery";
 import { getRecent } from "../lib/getPosts";
+
+import Navigation from "../components/Navigation/Navigation";
+import APOD from "../components/APOD/APOD";
+import Gallery from "../components/Gallery/Gallery";
 
 export const Content = styled.div``;
 
@@ -23,26 +25,7 @@ const Home = ({ gallery, today }) => {
           rel="stylesheet"
         />
       </Head>
-      <nav
-        style={{
-          position: "fixed",
-          top: "0",
-          left: "0",
-          zIndex: "99",
-          backgroundColor: "#fbf7ed",
-          backgroundImage: "radial-gradient(gray 0.3px, #fbf7ed 0.5px)",
-          backgroundSize: "20px 20px",
-          backgroundPosition: "0 0, 10px 10px",
-          height: "60px",
-          width: "100%",
-          boxShadow:
-            "0px 3px 5px -1px rgb(0 0 0 / 20%), 0px 5px 8px 0px rgb(0 0 0 / 14%), 0px 1px 14px 0px rgb(0 0 0 / 12%)",
-        }}
-      >
-        <ul style={{ listStyle: "none" }}>
-          <li style={{ fontSize: "24px", fontWeight: "bold" }}>Spacestagram</li>
-        </ul>
-      </nav>
+      <Navigation />
       <main>
         <APOD data={today} />
         <Content>

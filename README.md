@@ -1,3 +1,7 @@
+<p align="center">
+<a href="https://docs.google.com/document/d/13zXpyrC2yGxoLXKktxw2VJG2Jw8SdUfliLM-bYQLjqE/edit#" target="_blank"><img src="./.github/img/Banner.png" height="200" width="auto" ></a>
+</p>
+
 # Shernan Javier's Shopify Front End Intern Challenge Summer 2022
 
 You can access the deployed site on https://shernanjavier-shopify-challenge-2022.netlify.app/
@@ -35,3 +39,38 @@ npm run dev
 ### Open localhost:3000
 
 [localhost:3000](http://localhost:3000)
+
+## Features
+
+- Infinite Scrolling
+- Quotes Generator
+- Like Post Feature (Saved Locally)
+- Random Posts after initial 3 (initial 3 used to show local likes works)
+- Like Button Animation
+- Loading state
+
+### Features I did not get to complete
+
+- Shareable links for each image
+- Date picker
+
+## Technologies
+
+<div align="center" id="technologies">
+ <img src="./.github/img/Moose.svg" alt="Mechanical Keyboard Moose" height="200" width="200" />
+
+Below is a table that provides an overview of the technologies I was working with. (and a cute moose I made above.)
+
+<table>
+  <tr>
+    <th>Front-End</th>
+    <th>SSR Framework</th>
+    <th>Deployed On</th>
+  </tr>
+  <tr> 
+    <td><img src="https://img.shields.io/badge/react.js-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React.js"/></td>
+    <td><img src="https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js"/></td>
+    <td><img src="https://img.shields.io/badge/Netlify-%23ffffff.svg?style=for-the-badge&logo=netlify&logoColor=%2332B5BB" alt="Netlify" /></td>
+  </tr>
+ </table>
+</div>

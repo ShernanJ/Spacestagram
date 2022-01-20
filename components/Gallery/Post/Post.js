@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import LikeButton from "./LikeButton/LikeButton";
 import { Wrapper, ImageWrapper, ContentWrapper } from "./PostStyles";
 
 const Post = ({ post, url }) => {
   useEffect(() => {
     let liked = localStorage.getItem(JSON.stringify(post));
     if (liked == "true") {
-      setLikeIndicate("green");
+      setLikeIndicate("#FF5656");
     }
-  }, []);
+  }, [post]);
 
-  const [likeIndicate, setLikeIndicate] = useState("");
+  const [likeIndicate, setLikeIndicate] = useState("none");
   const like = (value) => {
     let post = JSON.stringify(value);
     if (localStorage.getItem(post) == "true") {
       localStorage.setItem(post, false);
-      setLikeIndicate("");
+      setLikeIndicate("none");
     } else {
       localStorage.setItem(post, true);
-      setLikeIndicate("green");
+      setLikeIndicate("#FF5656");
     }
   };
 
@@ -37,12 +38,7 @@ const Post = ({ post, url }) => {
         <div style={{ display: "flex", width: "100%" }}>
           <span style={{ flex: "1" }}>{post.date}</span>
           <div style={{ flex: "1", display: "flex", justifyContent: "right" }}>
-            <button
-              onClick={() => like(post)}
-              style={{ backgroundColor: likeIndicate }}
-            >
-              🚀
-            </button>
+            <LikeButton click={() => like(post)} fill={likeIndicate} />
           </div>
         </div>
         <h1>{post.title}</h1>
