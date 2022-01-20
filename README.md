@@ -2,7 +2,7 @@
 <a href="https://docs.google.com/document/d/13zXpyrC2yGxoLXKktxw2VJG2Jw8SdUfliLM-bYQLjqE/edit#" target="_blank"><img src="./.github/img/Banner.png" height="200" width="auto" ></a>
 </p>
 
-<h1 align="center">Shernan Javier's Shopify Front End Intern Challenge Summer 2022</h1>
+<h1 align="center">Shernan Javier's Shopify Front End Internship Challenge Submission - Summer 2022</h1>
 
 <p align="center">You can access the deployed site on <a href="https://shernanjavier-shopify-challenge-2022.netlify.app/">https://shernanjavier-shopify-challenge-2022.netlify.app/</a></p>
 
