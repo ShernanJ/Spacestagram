@@ -49,10 +49,11 @@ npm run dev
 - Like Button Animation
 - Loading state
 
-### Incomplete features (Optional)
+### Incomplete features (Optional and Personally planned)
 
-- Shareable links for each image
 - Date picker
+- Reveal more / Reveal less button on paragraph
+- Popup for each image with shareable link
 
 ## Technologies
 
