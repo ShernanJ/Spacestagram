@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   }
   &:hover {
     transition: all 0.3s;
+    cursor: pointer;
     & svg path {
       stroke: #ffb4b4;
       transition: all 0.3s;
