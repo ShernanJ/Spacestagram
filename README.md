@@ -4,9 +4,9 @@
 
 <h1 align="center">Shernan Javier's Shopify Front End Intern Challenge Summer 2022</h1>
 
-You can access the deployed site on https://shernanjavier-shopify-challenge-2022.netlify.app/
+<p align="center">You can access the deployed site on <a href="https://shernanjavier-shopify-challenge-2022.netlify.app/">https://shernanjavier-shopify-challenge-2022.netlify.app/</a></p>
 
-## Getting the project set up
+## Setting up the project
 
 ### Firstly, Clone the project
 
@@ -49,7 +49,7 @@ npm run dev
 - Like Button Animation
 - Loading state
 
-### Features I did not get to complete
+### Incomplete features (Optional)
 
 - Shareable links for each image
 - Date picker
