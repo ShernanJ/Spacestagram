@@ -58,6 +58,20 @@ export const Quote = styled.span`
     font-weight: 300;
     font-size: 1.5rem;
   }
+
+  @media only screen and (max-width: 760px) {
+    font-size: 1.5rem;
+    & span {
+      font-size: 1rem;
+    }
+  }
+  @media only screen and (max-width: 460px) {
+    font-size: 1rem;
+    & span {
+      font-size: 0.8rem;
+    }
+  }
+  }
 `;
 
 const APOD = ({ data: apod }) => {
