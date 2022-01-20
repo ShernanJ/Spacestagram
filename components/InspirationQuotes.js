@@ -1,3 +1,5 @@
+// Originally supposed to pull from public api but it was limited to 50 requests a day
+
 export const quotes = [
   {
     q: "There is no fear for one whose mind is not filled with desires.",
