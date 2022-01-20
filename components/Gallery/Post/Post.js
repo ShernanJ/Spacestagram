@@ -9,7 +9,7 @@ const Post = ({ post, url }) => {
     if (liked == "true") {
       setLikeIndicate("#FF5656");
     }
-  }, []);
+  }, [post]);
 
   const [likeIndicate, setLikeIndicate] = useState("none");
   const like = (value) => {

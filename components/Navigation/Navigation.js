@@ -17,17 +17,26 @@ const Navigation = () => {
           <a
             href="https://github.com/ShernanJ/shopify-frontend-summer-2022"
             target="_blank"
+            rel="noreferrer"
           >
             <GitHubIcon />
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/shernanjavier/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/shernanjavier/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <LinkedInIcon />
           </a>
         </li>
         <li>
-          <a href="https://www.shernanjavier.com/" target="_blank">
+          <a
+            href="https://www.shernanjavier.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <PortfolioIcon />
           </a>
         </li>
